@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report1Puntaje" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="89d75989-07b2-49c1-89d7-50cd5db3b2a8">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Juego"/>
+	<queryString language="SQL">
+		<![CDATA[select * from juego order by puntuacion DESC]]>
+	</queryString>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="juego"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="puntuacion" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="puntuacion"/>
+		<property name="com.jaspersoft.studio.field.label" value="puntuacion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="juego"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="hora" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="hora"/>
+		<property name="com.jaspersoft.studio.field.label" value="hora"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="juego"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="juego"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="10" width="400" height="50" uuid="e6a7009b-1507-45c7-8d9a-74a55a50ebe7"/>
+				<textElement>
+					<font size="30" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUNTAJES MAS ALTOS]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="30" y="1" width="140" height="30" uuid="24648710-e4c9-403a-8c55-0d250bd1e3b6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c7f29fff-ac20-4389-b29e-406929dc4537"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NOMBRE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="170" y="1" width="100" height="30" uuid="7efa96e7-84a9-4ed8-aacb-0636afa4f157">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fd1e3032-e7fc-4754-aeb3-b2b91aaa8c0c"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[PUNTAJE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="270" y="1" width="100" height="30" uuid="126521e0-3953-477b-a231-6dda861099eb">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5dcff654-ca5f-44d2-befd-424bae233554"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[HORA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="370" y="1" width="100" height="30" uuid="7b30d4ea-a367-48d2-8c3c-be9276a506ef">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ad46d8b2-03c8-4a2d-a830-aab0c9222aea"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="30" y="0" width="140" height="30" uuid="6dde7884-844c-448a-8910-4baaad6f8150">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1c715f88-b4fa-4ac7-8fc0-33da7ee79bc1"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="0" width="100" height="30" uuid="d8bc6d20-19e7-48e3-b7af-d55cdbdad10e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="94e6b449-3eff-4e68-8535-321ee172f0ac"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{puntuacion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="0" width="100" height="30" uuid="d9e7cd75-1e32-4d7d-b927-546d91f5ee1e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b6ea4a16-909d-4ad1-89e7-97a0a3777787"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="100" height="30" uuid="29229744-f254-4234-9635-14f1dd10abd5">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="798e3ce6-aea9-45c4-9cd3-6396dbbc61cd"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{hora}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
